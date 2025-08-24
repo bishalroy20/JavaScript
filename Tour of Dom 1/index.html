@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom intro</title>
+
+    <style>
+        #food-title{
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="./style/styles.css">
+
+</head>
+<body >
+        <main id="main-container">
+
+            <div>
+            <h1>Hello everyone .</h1>
+
+
+            <div>
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li>
+            </div>
+        </div>
+
+    <section>
+        <h1 id="food-title">Foods I love</h1>
+
+        <ul>
+            <li class="foreign">Rice</li>
+            <li class="foreign">Potato</li>
+            <li class="foreign">Fish</li>
+            <li>Lentis</li>
+            <li id="">Burger</li>
+            <li>Pizza</li>
+        </ul>
+    </section>
+
+
+
+    <section id="info">
+
+        <div id="info-style">
+            <h1>hellow everyone welcom <span>to the website</span></h1>
+        
+
+            <p>Lorem ipsum dolor <span>sit down</span> amet, <span>consectetur</span> adipisicing elit. Ipsum, laborum!</p>
+        </div>
+    </section>
+
+
+
+    <section id="players">
+        <h1>Inner text</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora at quis esse debitis minima ea aperiam vero sint veniam sed.</p>
+    
+        <ul id="player-list">
+            <li>Messi</li>
+            <li>Ronaldo</li>
+            <li>pele</li>
+        </ul>
+    </section>
+
+        </main>
+
+
+    <script>
+        // console.log("Hello world")
+
+        // example 2 (get element by tag name)
+        const student ={
+            name : 'abdul mia',
+            age : 25 ,
+            study : function(subject){
+                console.log(this.name , 'is studying' , subject);
+            }
+        }
+
+        const licollection = document.getElementsByTagName('li');
+        for(const key of licollection){
+            // console.log(licollection[key] ); in  
+            // console.log(licollection[key].innerText); in
+
+            // console.log(key.innerText); // of
+        }
+        // document.getElementsByTagName
+
+
+
+        // example 3 (get element by id)
+        // i need a specific li . we have to give an id .
+        const food = document.getElementById('food-title');
+        // console.log(food.innerText);
+        // console.log(food);
+
+
+        //example 4 (get element by class name)
+        const forignFood = document.getElementsByClassName('foreign');
+        for(const f of forignFood){
+            // console.log(f.innerText);
+        }
+
+
+
+        // example 5 (query selector all)
+        const spanlist = document.querySelectorAll('#info #info-style p span');
+        // console.log(spanlist);
+
+        for(const sp of spanlist){
+            // console.log(sp.innerText)
+        }
+
+        // example 6 (query selector ) first jeta pabe oitai dibe
+        const info = document.querySelector('#info #info-style span');
+        // console.log(info.innerText);
+
+
+        // example 7 (change text content)
+        /* const player = document.getElementById('players');
+        player.innerText = 'Hello everyone . welcome to the website . we are happy to see you .';
+        console.log(player.innerText);
+        player.style.color = 'blue';
+        player.style.backgroundColor = 'lightgray'; 
+        player.style.padding = '20px';
+        player.style.borderRadius = '10px';
+ */
+        // example 8 (innerhtml vs innertext)
+        const players = document.getElementById('players');
+        // console.log(players.innerHTML);
+        // console.log(players.innerText);
+    </script>
+
+    <script src="./js/hello.js"></script>
+</body>
+</html>
