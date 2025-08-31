@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom events</title>
+
+    <style>
+        .comment{
+            border : 1px solid black;
+            padding : 10px;
+            margin : 10px;
+            background-color: aqua;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <!-- option 1  -->
+    <h1>Dom Events starts from here .</h1>
+    <button onclick="console.log(20)" id="btn">Click Me</button>
+    <button onclick="console.log('click kore lav nai')">click me</button>
+
+    <br />
+    <!-- option 2 -->
+    <button onclick="makered()">Make Red</button>
+    <button onclick="makewhite()">Normal</button>
+
+    <br />
+    <!-- option 3 and 4 -->
+    <button id="btn-make-blue">Make Blue</button>
+
+    <button id="btn-make-purple">Make purple</button>
+
+    <!-- option 5 addEventListener -->
+    <button id="btn-make-green">Make Green</button>
+
+    <br /><br /><br />
+    <!-- Option 6 change text using addEventListener -->
+    <h1 id="title-text2">Ami puraton text .</h1>
+    <button id="btn-update-text">Update title</button>
+
+
+    <br><br>
+    <h2 id="user-number">No User</h2>
+    <button id="login-btn">Login</button>
+
+
+    <!-- option 7 -->
+     <h2 id="name-para">No Name</h2>
+    <input type="text" id="input-field" placeholder="your name"/>
+    <button id="update-btn">Update Name</button>
+
+
+
+    <!-- option 8 comment box -->
+    <br><br><br>
+    <h2>comment box</h2>
+        <textarea name="" id="text-box" cols="60" rows="10"
+            placeholder="write your comment">
+        </textarea>
+
+        <br>
+        <button id="post-cmt">Post Comment</button>
+
+
+        <h3>All Comments</h3>
+        
+            <div id="comment-container">
+                <p class="comment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo natus quaerat alias quae cum aliquid sint accusantium, quidem incidunt odio saepe nisi aliquam, neque magnam, numquam corporis nesciunt repellat?
+                </p>
+            </div>
+        
+
+            <br><br><br>
+    <!-- option 9 -->
+        <button id="btn-mouse">Micky mouse</button>
+
+        <input type="text" id="input-mouse" placeholder="mouse event"/>
+
+
+    <br><br><br>
+    <!-- option 10 github delete -->
+
+            <h1 id="secreat">secreat info</h1>
+        <input type="input-delete" id="input-delete" placeholder="type delete "/>
+        <button id="del-btn" disabled>Delete</button>
+
+
+    <script>
+        document.getElementById('input-delete').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const btnDelete = document.getElementById('del-btn');
+
+            // console.log('user is typing : ', text);
+
+            if(text === 'delete'){
+                console.log('you can delete now');
+                btnDelete.removeAttribute('disabled');
+                document.getElementById('secreat').style.display = 'none';
+            }
+            else{
+                btnDelete.setAttribute('disabled', true);
+            }
+        })
+        
+    </script>
+    <script src="./js/events.js"></script>
+  </body>
+</html>

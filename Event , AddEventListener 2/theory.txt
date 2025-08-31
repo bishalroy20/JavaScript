@@ -1,0 +1,35 @@
+DOM -> Document(file) object(elements) model(layout structure)
+
+Dom use kore js ki ki korte pare ?
+1. Html elements change korte pare
+2. html elements er css style change korte pare
+3. new html element create korte pare
+4. html elements remove korte pare
+5. html attribute change korte pare
+6. new html element create korte pare
+
+
+What is Node ?
+Node is a object . DOM tree te Document , doctype , elements , text guluke nodes bole .
+
+
+what are events?
+a special set of object . Give something has occured within a website . 
+
+
+
+
+DOM methods
+1. getElementById
+2. getElementByClassName
+3. queryselectAll
+4. queryselect
+5. createElement and appendChild
+
+
+
+what are the common types of js events ?
+mouse : click , mouseover , mouseout
+keyboard : keydown , keyup , keypress
+form : submit , change , focus
+window : load , resize , scroll

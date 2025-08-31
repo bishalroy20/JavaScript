@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buble Events</title>
+
+    <style>
+        #section{
+            border : 2px solid black;
+            padding : 20px;
+            margin : 20px;
+            background-color: lightblue;
+        }
+
+        #un-list{
+            border : 2px solid red;
+            padding : 20px;
+            margin : 20px;
+            background-color: lightgreen;
+        }
+
+        #un-list li{
+            border : 2px solid purple;
+            padding : 10px;
+            margin : 10px;
+            background-color: lightgrey;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Buble events</h2>
+
+    <section id="section">
+        <ol id="un-list">
+            <li id="li-1">akib</li>
+            <li id="li-2">rakib</li>
+            <li id="li-3">sakib</li>
+            <li id="li-4">nakib</li>
+            <li id="li-5">zakib</li>
+        </ol>
+    </section>
+
+
+    <script>
+        //li 1 clicked
+        document.getElementById('li-1').addEventListener('click', function(){
+            console.log('akib clicked');
+
+        });
+
+        document.getElementById('un-list').addEventListener('click', function(event){
+            console.log('list clicked');
+            // event.stopImmediatePropagation();
+            event.stopPropagation();
+            
+        });
+
+        //section clicked
+        document.getElementById('section').addEventListener('click', function(){
+            console.log('section clicked');
+        });
+
+
+    </script>
+
+
+</body>
+</html>
